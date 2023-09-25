@@ -5,7 +5,7 @@
     </head>
     <body>
         <div style="text-align: center;">
-            <h1>School Management</h1>
+            <h1>School Attendance</h1>
             <hr>
             <h2>Teacher: {{ $teacher->name }}</h2>
 

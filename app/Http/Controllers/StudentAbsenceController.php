@@ -81,9 +81,8 @@ class StudentAbsenceController extends Controller
     {
         $absences = $student->absences;
         $today = now()->format('Y-m-d');
-        $pdf = PDF::loadView('pdf.student_absences', compact('absences', 'student', 'today')); // قم بتمرير المتغير $student
-
-        return $pdf->stream('student_absences.pdf'); // استخدم دالة stream() بدلاً من download() لعرض الملف مباشرة
+        $pdf = PDF::loadView('pdf.student_absences', compact('absences', 'student', 'today'));
+        return $pdf->stream('student_absences.pdf');
     }
 
 }

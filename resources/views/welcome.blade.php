@@ -71,7 +71,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                        <a class="navbar-brand" href="#"> <h2>School Management System</h2> </a>
+                        <a class="navbar-brand" href="#"> <h2>School Attendance System</h2> </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -92,7 +92,7 @@
                     <div class="col-md-9">
                         <h3>Student Number: {{ $numStudents }}</h3>
                         <h3>Teacher Number: {{ $numTeachers }}</h3>
-                        <h3>Courses Number: {{ $numCourses }}</h3>
+                        <h3>Rooms Number: {{ $numCourses }}</h3>
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@
                 <label>Name</label><br>
                 <input type="text" name="name" id="name" value="{{ $courses->name }}" class="form-control"><br>
                 <label>Syllabus</label><br>
-                <input type="text" name="address" id="address" value="{{ $courses->syllabus }}" class="form-control"><br>
+                <input type="text" name="syllabus" id="syllabus" value="{{ $courses->syllabus }}" class="form-control"><br>
                 <label>Duration</label><br>
                 <input type="text" name="duration" id="duration" value="{{ $courses->duration }}"
                     class="form-control"><br>

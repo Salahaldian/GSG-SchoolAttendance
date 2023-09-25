@@ -43,7 +43,7 @@
                         </tbody>
                     </table>
                     <div>
-                        <a href="{{ route('generate-pdf', [$course->id, $student->id]) }}" class="btn btn-primary" target="_blank">Download PDF</a>
+                        <a href="{{ route('generate-pdf-student', [$course->id, $student->id]) }}" class="btn btn-primary" target="_blank">Download PDF</a>
                     </div>
                 </div>
             </div>

@@ -41,6 +41,9 @@
                         @endforeach
                         </tbody>
                     </table>
+                    <div>
+                        <a href="{{ route('generate-pdf-teacher', [$course->id, $teacher->id]) }}" class="btn btn-primary" target="_blank">Download PDF</a>
+                    </div>
                 </div>
             </div>
         </div>

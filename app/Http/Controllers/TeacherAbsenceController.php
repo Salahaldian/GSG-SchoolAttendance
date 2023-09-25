@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Teacher;
+use App\Models\TeacherAbsence;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class TeacherAbsenceController extends Controller
@@ -73,6 +75,15 @@ class TeacherAbsenceController extends Controller
         $absence->delete();
         return redirect()->route('courses.teachers.absences.index', [$course->id, $teacher->id])
             ->with('flash_message', 'Absence deleted!');
+    }
+
+    public function generatePdf(Course $course, Teacher $teacher)
+    {
+        $absences = $teacher->absences;
+        $today = now()->format('Y-m-d');
+        $pdf = PDF::loadView('pdf.teacher_absences', compact('absences', 'teacher', 'today')); // قم بتمرير المتغير $student
+
+        return $pdf->stream('teacher_absences.pdf'); // استخدم دالة stream() بدلاً من download() لعرض الملف مباشرة
     }
 
 }
